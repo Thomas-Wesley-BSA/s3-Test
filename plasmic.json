@@ -1,0 +1,141 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
+      "projectApiToken": "vXGGQpdi9fhcncabBdg8DcMRUbkz0iRW6HS1jzQufQR6QH0MasPwr9SX7ap4SsK3xXwwXmzZtglWGe0Rm2nw",
+      "projectName": "plasmic-basic-components",
+      "version": "3.20.0",
+      "cssFilePath": "plasmic/plasmic_basic_components/plasmic_plasmic_basic_components.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "CMDBvOhaI4s",
+          "name": "Iframe",
+          "displayName": "hostless-iframe",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "RhitNJW5Zu-",
+          "name": "Video",
+          "displayName": "hostless-html-video",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "PKldDYkH42",
+          "name": "Embed",
+          "displayName": "hostless-embed",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "D4RbnlpRXg3",
+          "name": "DataProvider",
+          "displayName": "hostless-data-provider",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "zlBHsvkFlN",
+          "name": "ConditionGuard",
+          "displayName": "hostless-condition-guard",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        }
+      ]
+    },
+    {
+      "projectId": "98tdXdGknXVLezmWEtk2yz",
+      "projectApiToken": "08PyXksRc1yD7p47NpF6Ik6IUR0J4G1W2iPrRWMg7y7WFuyzSe88sqdDI2t9KwtAdY4HhwRBaWFm5ZsmaoQ",
+      "projectName": "Koorong holding page",
+      "version": "latest",
+      "cssFilePath": "plasmic/koorong_holding_page/plasmic_koorong_holding_page.module.css",
+      "components": [
+        {
+          "id": "11fQZRO2Y0J",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "98tdXdGknXVLezmWEtk2yz",
+          "renderModuleFilePath": "plasmic/koorong_holding_page/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/koorong_holding_page/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        }
+      ],
+      "icons": [
+        {
+          "id": "marF4Inw4e",
+          "name": "KoorongLogosvgIcon",
+          "moduleFilePath": "plasmic/koorong_holding_page/icons/PlasmicIcon__KoorongLogosvg.tsx"
+        },
+        {
+          "id": "h_5Buau8wR",
+          "name": "FacebooksvgIcon",
+          "moduleFilePath": "plasmic/koorong_holding_page/icons/PlasmicIcon__Facebooksvg.tsx"
+        },
+        {
+          "id": "elhRjNNrB1",
+          "name": "InstagramsvgIcon",
+          "moduleFilePath": "plasmic/koorong_holding_page/icons/PlasmicIcon__Instagramsvg.tsx"
+        }
+      ],
+      "images": [],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "hkM7pepcf-Ok",
+          "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "CJeXvXBRwYof",
+          "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ]
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "ISP4inlL-LD3",
+        "name": "Screen",
+        "projectId": "98tdXdGknXVLezmWEtk2yz",
+        "contextFilePath": "plasmic/koorong_holding_page/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.301",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.301/dist/plasmic.schema.json"
+}

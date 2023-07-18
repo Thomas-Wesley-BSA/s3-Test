@@ -1,0 +1,29 @@
+{
+  "props": [
+    {
+      "name": "Dark Grey",
+      "type": "color",
+      "value": "#303030",
+      "category": "color",
+      "meta": {
+        "projectId": "98tdXdGknXVLezmWEtk2yz",
+        "id": "9wfo4SjeH"
+      }
+    },
+    {
+      "name": "Koorong red",
+      "type": "color",
+      "value": "#E82E2E",
+      "category": "color",
+      "meta": {
+        "projectId": "98tdXdGknXVLezmWEtk2yz",
+        "id": "MGtj1IlxA"
+      }
+    }
+  ],
+  "global": {
+    "meta": {
+      "source": "plasmic.app"
+    }
+  }
+}
