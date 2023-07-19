@@ -14,7 +14,7 @@ on:
 
 jobs:
   job:
-    name: Sync, build and deploy
+    name: Build and deploy Plasmic App
     runs-on: ubuntu-latest
     steps:
       - id: checkout
@@ -31,7 +31,11 @@ jobs:
       - id: build
         name: Building...
         run: |
-          yarn install
-          yarn build
-          cd out
-          ls -la
+            yarn install
+            yarn build
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: out
+          path: |
+            out
