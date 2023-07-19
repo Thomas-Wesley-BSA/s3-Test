@@ -33,4 +33,5 @@ jobs:
         run: |
           yarn install
           yarn build
+          cd out
           ls -la
