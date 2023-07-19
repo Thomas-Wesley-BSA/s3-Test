@@ -6,7 +6,11 @@ permissions:
   pages: write
   pull-requests: write
 
-on: [pull_request]
+on:
+    workflow_run:
+        workflows: ["Sync, build and deploy Plasmic app"]
+        types:
+        - completed
 
 jobs:
   job:
