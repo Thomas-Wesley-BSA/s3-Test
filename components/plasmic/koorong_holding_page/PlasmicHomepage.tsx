@@ -223,7 +223,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       >
                         {"Koorong.com"}
                       </span>
-                      <React.Fragment>{" experience"}</React.Fragment>
+                      <React.Fragment>{" experience."}</React.Fragment>
                     </React.Fragment>
                   </div>
                   <Embed
