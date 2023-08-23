@@ -165,6 +165,7 @@
 .text__wxziH {
   position: relative;
   text-align: center;
+  align-self: auto;
 }
 .embedHtml__ojRpw:global(.__wab_instance) {
   max-width: 100%;
