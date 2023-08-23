@@ -63,8 +63,7 @@
           "displayName": "hostless-condition-guard",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "98tdXdGknXVLezmWEtk2yz",
@@ -137,6 +136,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.301",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.301/dist/plasmic.schema.json"
+  "cliVersion": "0.1.304",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.304/dist/plasmic.schema.json"
 }

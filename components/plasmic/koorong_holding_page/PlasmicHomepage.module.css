@@ -16,11 +16,11 @@
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
   padding: 0px;
 }
-:where(.root > *) {
+.root > * {
   grid-column: 4;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  :where(.root > *) {
+  .root > * {
     grid-column: 4;
   }
 }
@@ -32,8 +32,8 @@
   width: 100%;
   background: var(--token-9wfo4SjeH);
   height: 150px;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
@@ -43,7 +43,7 @@
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
   padding: 8px 0;
 }
-:where(.headerSection > *) {
+.headerSection > * {
   grid-column: 4;
 }
 .svg__uIbOm {
@@ -63,8 +63,8 @@
   justify-items: center;
   width: 100%;
   grid-row-gap: 50px;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
@@ -74,7 +74,7 @@
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
   padding: 90px 0;
 }
-:where(.contentSection > *) {
+.contentSection > * {
   grid-column: 4;
 }
 .h1 {
@@ -190,8 +190,8 @@
   width: 100%;
   background: #f3f3f3;
   grid-row-gap: 40px;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
@@ -201,7 +201,7 @@
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
   padding: 90px 0;
 }
-:where(.subSection > *) {
+.subSection > * {
   grid-column: 4;
 }
 .h2 {
@@ -235,8 +235,8 @@
   justify-items: center;
   width: 100%;
   grid-row-gap: 10px;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
@@ -246,7 +246,7 @@
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
   padding: 30px;
 }
-:where(.footer > *) {
+.footer > * {
   grid-column: 4;
 }
 .text___4GEsq {
