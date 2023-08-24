@@ -5,6 +5,8 @@
   --plasmic-token-dark-grey: var(--token-9wfo4SjeH);
   --token-MGtj1IlxA: #e82e2e;
   --plasmic-token-koorong-red: var(--token-MGtj1IlxA);
+  --token-i7hirZ5B9: #ffffff;
+  --plasmic-token-white: var(--token-i7hirZ5B9);
 }
 
 .plasmic_tokens {

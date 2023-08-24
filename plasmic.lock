@@ -30,12 +30,12 @@
         {
           "type": "renderModule",
           "assetId": "11fQZRO2Y0J",
-          "checksum": "07fa9a47fb469705a02b5009c5a2ffed"
+          "checksum": "cbffd492176d847c2a7b53f8ebf6e342"
         },
         {
           "type": "cssRules",
           "assetId": "11fQZRO2Y0J",
-          "checksum": "07fa9a47fb469705a02b5009c5a2ffed"
+          "checksum": "cbffd492176d847c2a7b53f8ebf6e342"
         },
         {
           "type": "icon",
@@ -55,7 +55,7 @@
         {
           "assetId": "98tdXdGknXVLezmWEtk2yz",
           "type": "projectCss",
-          "checksum": "13212b3cbad1ac8fc3e7ba52c4a5e8ff"
+          "checksum": "2c12fe884e0a6f162bdeeb967517e698"
         }
       ],
       "codegenVersion": "0.0.1"

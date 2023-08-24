@@ -66,7 +66,7 @@ export type PlasmicHomepage__OverridesType = {
   countdownWrapper?: p.Flex<"div">;
   body?: p.Flex<"div">;
   subSection?: p.Flex<"section">;
-  h2?: p.Flex<"h2">;
+  subSection2?: p.Flex<"section">;
   footer?: p.Flex<"section">;
 };
 
@@ -94,21 +94,20 @@ function PlasmicHomepage__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const __nextRouter = useNextRouter();
 
-  const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const __nextRouter = useNextRouter();
+  const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
-  const [$queries, setDollarQueries] = React.useState({});
 
   return (
     <React.Fragment>
@@ -290,13 +289,11 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.subSection)}
           >
             <h2
-              data-plasmic-name={"h2"}
-              data-plasmic-override={overrides.h2}
               className={classNames(
                 projectcss.all,
                 projectcss.h2,
                 projectcss.__wab_text,
-                sty.h2
+                sty.h2__i7ZtY
               )}
             >
               <React.Fragment>
@@ -311,13 +308,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 </span>
               </React.Fragment>
             </h2>
-            <Embed
-              className={classNames("__wab_instance", sty.embedHtml__bW7F)}
-              code={
-                '<body onload="preFill()">\n<form name="ProfileForm" onsubmit="return CheckInputs();" action="https://link.koorong.com/u/register.php" method=get>\n<input type=hidden name="CID" value="760094772"><input type=hidden name="SID" value=""><input type=hidden name="UID" value=""><input type=hidden name="f" value="1903"><input type=hidden name="p" value="2"><input type=hidden name="a" value="r"><input type=hidden name="el" value=""><input type=hidden name="llid" value=""><input type=hidden name="c" value=""><input type=hidden name="counted" value=""><input type=hidden name="RID" value=""><input type=hidden name="mailnow" value="">\n<input type=text class="input" placeholder="First name" name="inp_1" maxlength=60 value="">\n<input type=text class="input" placeholder="Last name" name="inp_2" maxlength=60 value=""><br>\n<input type=text class="input" placeholder="Email" name="inp_3" maxlength=255 value=""><br>\nMobile:<input type=text name="inp_37" maxlength=60 value=""><br>\n<input tabindex=\'882\' class="OptInBox" type=checkbox name="optin" value="y" >Yes, I would like to be notified of offers and updates from Koorong.<br>\nInterests:<br>\n<div class="interest-container">\n  <div class="interest-column">\n    <input type="checkbox" name="interest[]" value="1">Sales<br>\n    <input type="checkbox" name="interest[]" value="2">Store Updates<br>\n    <input type="checkbox" name="interest[]" value="3">Birthday Offer<br>\n    <input type="checkbox" name="interest[]" value="7">Christian Gifts<br>\n  </div>\n  <div class="interest-column">\n    <input type="checkbox" name="interest[]" value="4">New Releases & Highlights<br>\n    <input type="checkbox" name="interest[]" value="5">Christian Living<br>\n    <input type="checkbox" name="interest[]" value="6">Academic Resources<br>\n\n  </div>\n</div>\n<input aria-label=\'Submit\' class="submitButton" tabindex=\'993\' type=button onclick="javascript:SubmitIt()" name="submit1" value="Sign Up"></form>\n<script language="javascript">\n<!--\nfunction onbeforesubmit()\n{\nreturn true;\n}\n//-->\n</script>\n<script language="javascript">\n<!--\n\tvar error;\nvar form_lanuage = \'en\';\nfunction is_0_valid(){\n  count = 0;\n  if(document.ProfileForm.optin){\n    if(document.ProfileForm.optin.checked){\n      if(document.getElementsByName(\'interest[]\')){\n        if(document.getElementsByName(\'interest[]\').length > 0 ){\n          Interest = document.getElementsByName(\'interest[]\');\n          for(i = 0 ; i < Interest.length;i++){\n           if(Interest[i].checked)\n         ++count;\n }\n          if(count == 0){\n            error  += "Interests:";\n            return false;\n  }\n        }\n      }\n    }\n  }\n return  true;\n}\nfunction is_1_valid(input)\n{\n\tif(input == "")\n\t{\n\t\terror += "First Name: missing data!\\n";\n\t\treturn false;\n\t}\n\n\treturn true;\n}\nfunction is_2_valid(input)\n{\n\tif(input == "")\n\t{\n\t\terror += "Last Name: missing data!\\n";\n\t\treturn false;\n\t}\n\n\treturn true;\n}\nfunction is_3_valid(input)\n{\n\tif(input == "")\n\t{\n\t\terror += "Email: missing data!\\n";\n\t\treturn false;\n\t}\n\nvar emailPat=/^(.+)@(.+)$/\nvar specialChars="\\\\(\\\\)<>@,;:\\\\\\\\\\\\\\"\\\\.\\\\[\\\\]"\nvar validChars="\\[^\\\\s" + specialChars + "\\]"\nvar quotedUser="(\\"[^\\"]*\\")"\nvar ipDomainPat=/^\\[(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\]$/\nvar atom=validChars + \'+\'\nvar word="(" + atom + "|" + quotedUser + ")"\nvar userPat=new RegExp("^" + word + "(\\\\." + word + ")*$")\nvar domainPat=new RegExp("^" + atom + "(\\\\." + atom +")*$")\n\n\nvar matchArray=input.match(emailPat)\nif (matchArray==null) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // check @ and .\nreturn false\n}\nvar user=matchArray[1]\nvar domain=matchArray[2]\n\nif (user.match(userPat)==null) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // username doesn\'t seem to be valid\nreturn false\n}\n\nvar IPArray=domain.match(ipDomainPat)\nif (IPArray!=null) {\n  for (var i=1;i<=4;i++) {\n    if (IPArray[i]>255) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // Destination IP address is invalid\nreturn false\n    }\n    }\n    return true\n}\n\nvar domainArray=domain.match(domainPat)\nif (domainArray==null) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // The domain name doesn\'t seem to be valid\n   return false\n}\n\nvar atomPat=new RegExp(atom,"g")\nvar domArr=domain.match(atomPat)\nvar len=domArr.length\n\n\nif (len<2) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // This address is missing a hostname\nreturn false\n}\n\n\n\treturn true;\n}\nfunction is_37_valid(input)\n{\n\tif(input == "")\n\t{\n\t\terror += "Mobile: missing data!\\n";\n\t\treturn false;\n\t}\n\n\treturn true;\n}\n\nfunction CheckInputs()\n{\n\tvar check_ok = true;\n\terror = "Wrong input!\\n";\n\n\tcheck_ok = (is_0_valid(\'null\') && check_ok);\n\tcheck_ok = (is_1_valid(document.ProfileForm.inp_1.value) && check_ok);\n\tcheck_ok = (is_2_valid(document.ProfileForm.inp_2.value) && check_ok);\n\tcheck_ok = (is_3_valid(document.ProfileForm.inp_3.value) && check_ok);\n\tcheck_ok = (is_37_valid(document.ProfileForm.inp_37.value) && check_ok);\n\tif(check_ok == false)\n\t\talert(error);\n\treturn check_ok;\n}\n//-->\n</script>\n\n\n<script language="javascript">\nfunction SubmitIt(){\n                if(CheckInputs() == true){\n                                if(window.onbeforesubmit)\n                                                onbeforesubmit();\n                                document.ProfileForm.submit();\n                }\n}\n\nfunction MailIt(){\n                if(CheckInputs()){\n                                if((document.ProfileForm.subject.value==\'\') || (document.ProfileForm.msg.value==\'\'))\n                                                alert(\'Bitte f\\u00fcr Sie die Nachrichtenfelder aus!\');\n                                else\n                                                document.ProfileForm.submit();\n    }\n}\n\nfunction FieldWithName(frm, fieldname, numofield)\n{\n    if(!numofield)\n        numofield = 0;\n    field_count = 0;\n    for(i = 0; i < frm.elements.length; ++i)\n    {\n        if(frm.elements[i].name == fieldname)\n        {\n            if(field_count == numofield)\n                return frm.elements[i];\n            else\n                field_count++;\n        }\n    }\n}\nfunction NumChecked(frm, fieldname)\n{\n\t\tvar count = 0;\n\t\tfor(i = 0; i < frm.elements.length; ++i)\n\t\t{\n\t\t\t\tif(frm.elements[i].name == fieldname && frm.elements[i].checked == true)\t\t\n\t\t\t\t\t\t++count;\n\t\t}\n\t\treturn count;\n}\nfunction NumSel(field)\n{\n    var count = 0;\n    for(i = 0; i < field.length; ++i)\n        if(field[i].selected == true) ++count;\n    return count;\n}\n</script>\n\n<script language="javascript">\nvar multiFields = new Array();\nvar dateFields = new Array();\nmultiFields["interest[]"] = "interest"\nmultiFields["optin"] = "optin"\nvar arr_optin = new Array();\narr_optin["True"] = "y";\nvar arr_interest = new Array();\narr_interest["Sales"] = "1";\narr_interest["Store Updates"] = "2";\narr_interest["Birthday Offer"] = "3";\narr_interest["New Releases & Highlights"] = "4";\narr_interest["Christian Living"] = "5";\narr_interest["Academic Resources"] = "6";\narr_interest["Christian Gifts"] = "7";\n</script>\n<script language="javascript" src="https://link.koorong.com/u/nprefill.js" type="text/javascript"></script>\n\n<style>\n  .input {\n    \tbackground: white;\n\tborder: 1px solid #cecece;\n\tborder-radius: 0px;\n\tbottom: 0px;\n\tbox-sizing: border-box;\n\tcolor: #f3f3f3;\n\tfont-family: inherit;\n\tfont-size: 16px;\n\tfont-weight: 400;\n\theight: 100%;\n\tleft: 0px;\n\tline-height: 20px;\n\tmargin: 0px;\n\toverflow: visible;\n\tpadding: 0.375rem 0.75rem;\n\tpadding-right: 2.25rem;\n\ttransition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;\n  width:100%\n  }\n\n.submitButton {\n\tbackground-color: #3c8083;\n\tborder: 1px solid transparent;\n\tborder-radius: 0px;\n\tbottom: 0px;\n\tbox-sizing: border-box;\n\tcolor: #ffffff;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\tfont-family: Inter, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";\n\tfont-size: 1rem;\n\tfont-weight: 500;\n\tleft: 0px;\n\tline-height: 2.25;\n  margin-top: 10px;\n\tpadding-left: 20px;\n  padding-right: 20px;\n\tposition: relative;\n\tright: 0px;\n\ttext-align: center;\n\ttext-decoration: none;\n\ttop: 0px;\n\ttransition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;\n\tuser-select: none;\n\tvertical-align: middle;\n\tz-index: 2;\n  width: 100%;\n}\n.submitButton:hover { \n\tbackground-color: #306669;\n\tborder-color: rgb(44, 94, 96);\n\tcolor: #ffffff;\n\ttext-decoration: none;\n}\n\n\n\n.interest-container {\n  display: flex;\n  width:100%;\n  font-size:12px\n}\n\n.interest-column {\n  flex: 1;\n}' as const
-              }
-            />
-
             <div
               className={classNames(
                 projectcss.all,
@@ -326,10 +316,62 @@ function PlasmicHomepage__RenderFunc(props: {
               )}
             >
               {
-                "Subscribe now to receive the latest updates and\n a 10% discount once the website is back online! "
+                "Sign up now to receive the latest updates and\n a 10% discount once the website is back online! "
               }
             </div>
+            <Embed
+              className={classNames("__wab_instance", sty.embedHtml__bW7F)}
+              code={
+                '<div data-tf-live="01H8MZGRR13STF9J52XX6PKM35"></div><script src="//embed.typeform.com/next/embed.js"></script>' as const
+              }
+            />
           </section>
+          {false ? (
+            <section
+              data-plasmic-name={"subSection2"}
+              data-plasmic-override={overrides.subSection2}
+              className={classNames(projectcss.all, sty.subSection2)}
+            >
+              <h2
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h2,
+                  projectcss.__wab_text,
+                  sty.h2__ueqpw
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>
+                    {"Subscribe for Updates \nand a "}
+                  </React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#E82E2E" }}
+                  >
+                    {"10% Discount! \n\n"}
+                  </span>
+                </React.Fragment>
+              </h2>
+              <Embed
+                className={classNames("__wab_instance", sty.embedHtml__udJlT)}
+                code={
+                  '<body onload="preFill()">\n<form name="ProfileForm" onsubmit="return CheckInputs();" action="https://link.koorong.com/u/register.php" method=get>\n<input type=hidden name="CID" value="760094772"><input type=hidden name="SID" value=""><input type=hidden name="UID" value=""><input type=hidden name="f" value="1903"><input type=hidden name="p" value="2"><input type=hidden name="a" value="r"><input type=hidden name="el" value=""><input type=hidden name="llid" value=""><input type=hidden name="c" value=""><input type=hidden name="counted" value=""><input type=hidden name="RID" value=""><input type=hidden name="mailnow" value="">\n<input type=text class="input" placeholder="First name" name="inp_1" maxlength=60 value="">\n<input type=text class="input" placeholder="Last name" name="inp_2" maxlength=60 value=""><br>\n<input type=text class="input" placeholder="Email" name="inp_3" maxlength=255 value=""><br>\nMobile:<input type=text name="inp_37" maxlength=60 value=""><br>\n<input tabindex=\'882\' class="OptInBox" type=checkbox name="optin" value="y" >Yes, I would like to be notified of offers and updates from Koorong.<br>\nInterests:<br>\n<div class="interest-container">\n  <div class="interest-column">\n    <input type="checkbox" name="interest[]" value="1">Sales<br>\n    <input type="checkbox" name="interest[]" value="2">Store Updates<br>\n    <input type="checkbox" name="interest[]" value="3">Birthday Offer<br>\n    <input type="checkbox" name="interest[]" value="7">Christian Gifts<br>\n  </div>\n  <div class="interest-column">\n    <input type="checkbox" name="interest[]" value="4">New Releases & Highlights<br>\n    <input type="checkbox" name="interest[]" value="5">Christian Living<br>\n    <input type="checkbox" name="interest[]" value="6">Academic Resources<br>\n\n  </div>\n</div>\n<input aria-label=\'Submit\' class="submitButton" tabindex=\'993\' type=button onclick="javascript:SubmitIt()" name="submit1" value="Sign Up"></form>\n<script language="javascript">\n<!--\nfunction onbeforesubmit()\n{\nreturn true;\n}\n//-->\n</script>\n<script language="javascript">\n<!--\n\tvar error;\nvar form_lanuage = \'en\';\nfunction is_0_valid(){\n  count = 0;\n  if(document.ProfileForm.optin){\n    if(document.ProfileForm.optin.checked){\n      if(document.getElementsByName(\'interest[]\')){\n        if(document.getElementsByName(\'interest[]\').length > 0 ){\n          Interest = document.getElementsByName(\'interest[]\');\n          for(i = 0 ; i < Interest.length;i++){\n           if(Interest[i].checked)\n         ++count;\n }\n          if(count == 0){\n            error  += "Interests:";\n            return false;\n  }\n        }\n      }\n    }\n  }\n return  true;\n}\nfunction is_1_valid(input)\n{\n\tif(input == "")\n\t{\n\t\terror += "First Name: missing data!\\n";\n\t\treturn false;\n\t}\n\n\treturn true;\n}\nfunction is_2_valid(input)\n{\n\tif(input == "")\n\t{\n\t\terror += "Last Name: missing data!\\n";\n\t\treturn false;\n\t}\n\n\treturn true;\n}\nfunction is_3_valid(input)\n{\n\tif(input == "")\n\t{\n\t\terror += "Email: missing data!\\n";\n\t\treturn false;\n\t}\n\nvar emailPat=/^(.+)@(.+)$/\nvar specialChars="\\\\(\\\\)<>@,;:\\\\\\\\\\\\\\"\\\\.\\\\[\\\\]"\nvar validChars="\\[^\\\\s" + specialChars + "\\]"\nvar quotedUser="(\\"[^\\"]*\\")"\nvar ipDomainPat=/^\\[(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\]$/\nvar atom=validChars + \'+\'\nvar word="(" + atom + "|" + quotedUser + ")"\nvar userPat=new RegExp("^" + word + "(\\\\." + word + ")*$")\nvar domainPat=new RegExp("^" + atom + "(\\\\." + atom +")*$")\n\n\nvar matchArray=input.match(emailPat)\nif (matchArray==null) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // check @ and .\nreturn false\n}\nvar user=matchArray[1]\nvar domain=matchArray[2]\n\nif (user.match(userPat)==null) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // username doesn\'t seem to be valid\nreturn false\n}\n\nvar IPArray=domain.match(ipDomainPat)\nif (IPArray!=null) {\n  for (var i=1;i<=4;i++) {\n    if (IPArray[i]>255) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // Destination IP address is invalid\nreturn false\n    }\n    }\n    return true\n}\n\nvar domainArray=domain.match(domainPat)\nif (domainArray==null) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // The domain name doesn\'t seem to be valid\n   return false\n}\n\nvar atomPat=new RegExp(atom,"g")\nvar domArr=domain.match(atomPat)\nvar len=domArr.length\n\n\nif (len<2) {\nerror += "E-Mail: Please enter a valid e-mail address!\\n"; // This address is missing a hostname\nreturn false\n}\n\n\n\treturn true;\n}\nfunction is_37_valid(input)\n{\n\tif(input == "")\n\t{\n\t\terror += "Mobile: missing data!\\n";\n\t\treturn false;\n\t}\n\n\treturn true;\n}\n\nfunction CheckInputs()\n{\n\tvar check_ok = true;\n\terror = "Wrong input!\\n";\n\n\tcheck_ok = (is_0_valid(\'null\') && check_ok);\n\tcheck_ok = (is_1_valid(document.ProfileForm.inp_1.value) && check_ok);\n\tcheck_ok = (is_2_valid(document.ProfileForm.inp_2.value) && check_ok);\n\tcheck_ok = (is_3_valid(document.ProfileForm.inp_3.value) && check_ok);\n\tcheck_ok = (is_37_valid(document.ProfileForm.inp_37.value) && check_ok);\n\tif(check_ok == false)\n\t\talert(error);\n\treturn check_ok;\n}\n//-->\n</script>\n\n\n<script language="javascript">\nfunction SubmitIt(){\n                if(CheckInputs() == true){\n                                if(window.onbeforesubmit)\n                                                onbeforesubmit();\n                                document.ProfileForm.submit();\n                }\n}\n\nfunction MailIt(){\n                if(CheckInputs()){\n                                if((document.ProfileForm.subject.value==\'\') || (document.ProfileForm.msg.value==\'\'))\n                                                alert(\'Bitte f\\u00fcr Sie die Nachrichtenfelder aus!\');\n                                else\n                                                document.ProfileForm.submit();\n    }\n}\n\nfunction FieldWithName(frm, fieldname, numofield)\n{\n    if(!numofield)\n        numofield = 0;\n    field_count = 0;\n    for(i = 0; i < frm.elements.length; ++i)\n    {\n        if(frm.elements[i].name == fieldname)\n        {\n            if(field_count == numofield)\n                return frm.elements[i];\n            else\n                field_count++;\n        }\n    }\n}\nfunction NumChecked(frm, fieldname)\n{\n\t\tvar count = 0;\n\t\tfor(i = 0; i < frm.elements.length; ++i)\n\t\t{\n\t\t\t\tif(frm.elements[i].name == fieldname && frm.elements[i].checked == true)\t\t\n\t\t\t\t\t\t++count;\n\t\t}\n\t\treturn count;\n}\nfunction NumSel(field)\n{\n    var count = 0;\n    for(i = 0; i < field.length; ++i)\n        if(field[i].selected == true) ++count;\n    return count;\n}\n</script>\n\n<script language="javascript">\nvar multiFields = new Array();\nvar dateFields = new Array();\nmultiFields["interest[]"] = "interest"\nmultiFields["optin"] = "optin"\nvar arr_optin = new Array();\narr_optin["True"] = "y";\nvar arr_interest = new Array();\narr_interest["Sales"] = "1";\narr_interest["Store Updates"] = "2";\narr_interest["Birthday Offer"] = "3";\narr_interest["New Releases & Highlights"] = "4";\narr_interest["Christian Living"] = "5";\narr_interest["Academic Resources"] = "6";\narr_interest["Christian Gifts"] = "7";\n</script>\n<script language="javascript" src="https://link.koorong.com/u/nprefill.js" type="text/javascript"></script>\n\n<style>\n  .input {\n    \tbackground: white;\n\tborder: 1px solid #cecece;\n\tborder-radius: 0px;\n\tbottom: 0px;\n\tbox-sizing: border-box;\n\tcolor: #f3f3f3;\n\tfont-family: inherit;\n\tfont-size: 16px;\n\tfont-weight: 400;\n\theight: 100%;\n\tleft: 0px;\n\tline-height: 20px;\n\tmargin: 0px;\n\toverflow: visible;\n\tpadding: 0.375rem 0.75rem;\n\tpadding-right: 2.25rem;\n\ttransition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;\n  width:100%\n  }\n\n.submitButton {\n\tbackground-color: #3c8083;\n\tborder: 1px solid transparent;\n\tborder-radius: 0px;\n\tbottom: 0px;\n\tbox-sizing: border-box;\n\tcolor: #ffffff;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\tfont-family: Inter, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";\n\tfont-size: 1rem;\n\tfont-weight: 500;\n\tleft: 0px;\n\tline-height: 2.25;\n  margin-top: 10px;\n\tpadding-left: 20px;\n  padding-right: 20px;\n\tposition: relative;\n\tright: 0px;\n\ttext-align: center;\n\ttext-decoration: none;\n\ttop: 0px;\n\ttransition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;\n\tuser-select: none;\n\tvertical-align: middle;\n\tz-index: 2;\n  width: 100%;\n}\n.submitButton:hover { \n\tbackground-color: #306669;\n\tborder-color: rgb(44, 94, 96);\n\tcolor: #ffffff;\n\ttext-decoration: none;\n}\n\n\n\n.interest-container {\n  display: flex;\n  width:100%;\n  font-size:12px\n}\n\n.interest-column {\n  flex: 1;\n}' as const
+                }
+              />
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__kyqMm
+                )}
+              >
+                {
+                  "Sign up now to receive the latest updates and\n a 10% discount once the website is back online! "
+                }
+              </div>
+            </section>
+          ) : null}
           <section
             data-plasmic-name={"footer"}
             data-plasmic-override={overrides.footer}
@@ -384,7 +426,7 @@ const PlasmicDescendants = {
     "countdownWrapper",
     "body",
     "subSection",
-    "h2",
+    "subSection2",
     "footer"
   ],
   headerSection: ["headerSection"],
@@ -392,8 +434,8 @@ const PlasmicDescendants = {
   h1: ["h1"],
   countdownWrapper: ["countdownWrapper"],
   body: ["body"],
-  subSection: ["subSection", "h2"],
-  h2: ["h2"],
+  subSection: ["subSection"],
+  subSection2: ["subSection2"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -407,7 +449,7 @@ type NodeDefaultElementType = {
   countdownWrapper: "div";
   body: "div";
   subSection: "section";
-  h2: "h2";
+  subSection2: "section";
   footer: "section";
 };
 
@@ -477,7 +519,7 @@ export const PlasmicHomepage = Object.assign(
     countdownWrapper: makeNodeComponent("countdownWrapper"),
     body: makeNodeComponent("body"),
     subSection: makeNodeComponent("subSection"),
-    h2: makeNodeComponent("h2"),
+    subSection2: makeNodeComponent("subSection2"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicHomepage
