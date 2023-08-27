@@ -211,7 +211,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ fontWeight: 700, color: "#E82E2E" }}
                       >
-                        {"Wednesday 2 August"}
+                        {"Wednesday, 6 September"}
                       </span>
                       <React.Fragment>
                         {"\nto explore our new and improved "}
@@ -252,7 +252,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   style={{ fontWeight: 400 }}
                 >
                   {
-                    "Our website, stores, and systems are currently undergoing a major upgrade to enhance your shopping experience. We apologize for any inconvenience caused, but rest assured that these improvements will bring better performance, improved security, and exciting new features. "
+                    "Our website, stores, and systems are currently undergoing a major upgrade to enhance your shopping experience. We apologise for any inconvenience caused, but rest assured that these improvements will bring better performance, improved security, and exciting new features. "
                   }
                 </span>
                 <React.Fragment>{""}</React.Fragment>
@@ -261,7 +261,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   style={{ fontWeight: 700, color: "#E82E2E" }}
                 >
                   {
-                    "During the upgrade period, our website and stores will be temporarily closed and will reopen on Wednesday, August 2nd."
+                    "During the upgrade period, our website and stores will be temporarily closed and will reopen on Wednesday, 6 September 2023."
                   }
                 </span>
                 <React.Fragment>{"\n"}</React.Fragment>
