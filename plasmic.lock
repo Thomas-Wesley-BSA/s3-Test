@@ -2,7 +2,7 @@
   "projects": [
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
-      "version": "3.20.0",
+      "version": "3.22.0",
       "dependencies": {},
       "lang": "ts",
       "fileLocks": [
@@ -18,7 +18,7 @@
       "projectId": "98tdXdGknXVLezmWEtk2yz",
       "version": "latest",
       "dependencies": {
-        "caTPwKxj5ZrD9LQ7DMdK4Z": "3.20.0"
+        "caTPwKxj5ZrD9LQ7DMdK4Z": "3.22.0"
       },
       "lang": "ts",
       "fileLocks": [
@@ -30,12 +30,12 @@
         {
           "type": "renderModule",
           "assetId": "11fQZRO2Y0J",
-          "checksum": "fcbb24af22ce452a97edc1c80d132437"
+          "checksum": "634999266b68171ba300fcf4b5160f8b"
         },
         {
           "type": "cssRules",
           "assetId": "11fQZRO2Y0J",
-          "checksum": "fcbb24af22ce452a97edc1c80d132437"
+          "checksum": "634999266b68171ba300fcf4b5160f8b"
         },
         {
           "type": "icon",
@@ -55,7 +55,7 @@
         {
           "assetId": "98tdXdGknXVLezmWEtk2yz",
           "type": "projectCss",
-          "checksum": "13212b3cbad1ac8fc3e7ba52c4a5e8ff"
+          "checksum": "2c12fe884e0a6f162bdeeb967517e698"
         }
       ],
       "codegenVersion": "0.0.1"
