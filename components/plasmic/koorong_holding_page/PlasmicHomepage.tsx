@@ -168,7 +168,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   {"upgrading"}
                 </span>
                 <React.Fragment>
-                  {"\nour website and stores!\nStay tuned"}
+                  {"\nour website and stores!\nStay tuned."}
                 </React.Fragment>
               </React.Fragment>
             </h1>
