@@ -203,27 +203,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__wxziH
                     )}
                   >
-                    <React.Fragment>
-                      <React.Fragment>
-                        {"Check back at noon on "}
-                      </React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontWeight: 700, color: "#E82E2E" }}
-                      >
-                        {"Wednesday, 6 September"}
-                      </span>
-                      <React.Fragment>
-                        {"\nto explore our new and improved "}
-                      </React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontWeight: 700 }}
-                      >
-                        {"Koorong.com"}
-                      </span>
-                      <React.Fragment>{" experience"}</React.Fragment>
-                    </React.Fragment>
+                    {
+                      "Check back soon to explore our new and improved Koorong.com experience"
+                    }
                   </div>
                   <Embed
                     className={classNames(
@@ -261,7 +243,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   style={{ fontWeight: 700, color: "#E82E2E" }}
                 >
                   {
-                    "During the upgrade period, our website and stores will be temporarily closed and will reopen on Wednesday, 6 September 2023."
+                    "During the upgrade period, our website and stores will be temporarily closed and we are aiming to reopen on Wednesday, 6 September 2023."
                   }
                 </span>
                 <React.Fragment>{"\n"}</React.Fragment>
