@@ -63,8 +63,7 @@
           "displayName": "hostless-condition-guard",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "98tdXdGknXVLezmWEtk2yz",

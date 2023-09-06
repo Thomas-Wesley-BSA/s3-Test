@@ -280,6 +280,29 @@ function PlasmicHomepage__RenderFunc(props: {
                     "Stay informed by subscribing below to receive updates on when our website and stores will be ready. Thank you for your patience, and we can't wait to welcome you back to our upgraded shopping experience!"
                   }
                 </span>
+                <React.Fragment>{"\n"}</React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 400 }}
+                >
+                  {""}
+                </span>
+                <React.Fragment>{"\n"}</React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 700 }}
+                >
+                  {"Note:"}
+                </span>
+                <React.Fragment>{""}</React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 400 }}
+                >
+                  {
+                    " Our Springwood store is temporarily closed for refurbishments."
+                  }
+                </span>
               </React.Fragment>
             </div>
           </section>
